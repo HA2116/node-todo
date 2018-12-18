@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/nodejs
+    destination: /var/www/port81
   - source: /mongodb-enterprise.repo
     destination: /etc/yum.repos.d
 hooks:
