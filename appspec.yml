@@ -6,7 +6,7 @@ files:
   - source: /mongodb-enterprise.repo
     destination: /etc/yum.repos.d
 hooks:
-  AfterInstall:
+  BeforeInstall:
     - location: mongo_install
       runas: root
   ApplicationStart:
