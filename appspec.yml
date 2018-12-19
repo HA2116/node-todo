@@ -3,12 +3,7 @@ os: linux
 files:
   - source: /
     destination: /var/www/port81
-  - source: /mongodb-enterprise.repo
-    destination: /etc/yum.repos.d
 hooks:
-  BeforeInstall:
-    - location: mongo_install
-      runas: root
   ApplicationStart:
     - location: after_install_script.sh
       runas: root
