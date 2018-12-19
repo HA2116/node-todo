@@ -2,7 +2,7 @@
 var express = require('express');
 var app = express(); 						// create our app w/ express
 var mongoose = require('mongoose'); 				// mongoose for mongodb
-var port = process.env.PORT || 8082; 				// set the port
+var port = process.env.PORT || 8081; 				// set the port
 var database = require('./config/database'); 			// load the database config
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
@@ -23,5 +23,5 @@ app.use(methodOverride('X-HTTP-Method-Override')); // override with the X-HTTP-M
 require('./app/routes.js')(app);
 
 // listen (start app with node server.js) ======================================
-app.listen(port,'172.31.2.62');
+app.listen(port);
 console.log("App listening on port " + port);
