@@ -8,6 +8,6 @@ hooks:
     - location: deregister_from_elb.sh
       runas: root
   ApplicationStart:
-    - location: register_with_elb.sh
     - location: after_install_script.sh
+    - location: register_with_elb.sh
       runas: root
