@@ -4,10 +4,6 @@ files:
   - source: /
     destination: /var/www/port81
 hooks:
-  ApplicationStop:
-   # - location: deregister_from_elb.sh
-    #  runas: root
   ApplicationStart:
     - location: after_install_script.sh
-   #- location: register_with_elb.sh
       runas: root
